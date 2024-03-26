@@ -1,0 +1,15 @@
+# Rename this file to .env
+# Add account settings and API keys here.
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry gets set as a local environment variable.
+# This file overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: 'Your_Gmail_Username'
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+
+
+OPEN_WEATHER_API_KEY: 'your openweather api goes here'
+DATABASE_HOST: 'localhost or whatever host you want to use'
+DATABASE_NAME: 'air_pollution_app'
+DATABASE_USER: 'database user for the app'
+DATABASE_PASSWORD: 'database password for the app'
