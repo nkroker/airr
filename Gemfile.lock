@@ -300,7 +300,7 @@ DEPENDENCIES
   capybara
   database_cleaner
   debug
-  error_highlight (>= 0.4.0)
+  error_highlight (>= 0.6.0)
   factory_girl_rails
   httparty
   importmap-rails
