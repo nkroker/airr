@@ -20,8 +20,8 @@ class PollutionStatService
 
     def safe_call
       yield
-    rescue StandardError
-      PollutionStatServiceError.new
+    rescue StandardError => e
+      raise PollutionStatServiceError.new(e.message)
     end
   end
 end
