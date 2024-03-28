@@ -8,6 +8,6 @@ end
 RSpec.configure do |config|
   config.before do
     # Public Api
-    stub_request(:any, /.*someapi.com*/).to_return(status: 200, body: {}.to_json, headers: {})
+    # stub_request(:any, /.*someapi.com*/).to_return(status: 200, body: {}.to_json, headers: {})
   end
 end
