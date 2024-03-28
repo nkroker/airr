@@ -54,6 +54,8 @@ jobs:
         with:
           bundler-cache: true
       # Add or replace database setup steps here
+      - name: Updating system gem
+        run: gem update --system
       - name: Set up database schema
         run: bundle exec bin/rails db:schema:load
       # Add or replace test runners here
