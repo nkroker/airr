@@ -14,6 +14,7 @@ require 'webmock/rspec'
 require 'byebug'
 require 'debug'
 require 'pry'
+require 'factory_bot_rails'
 
 include WebMock::API
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -45,7 +46,7 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
