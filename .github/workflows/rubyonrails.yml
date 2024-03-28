@@ -55,8 +55,8 @@ jobs:
           ruby-version: '3.1.4'
           bundler-cache: true
       # Add or replace database setup steps here
-      - name: Updating system gem
-        run: gem update --system && gem update error_highlight:0.6.0
+      - name: Updating reinstalling
+        run: bundle install --force
       - name: Set up database schema
         run: bundle exec rake db:create db:migrate
       # Add or replace test runners here
