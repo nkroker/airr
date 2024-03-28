@@ -52,6 +52,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: '3.1.4'
           bundler-cache: true
       # Add or replace database setup steps here
       - name: Updating system gem
