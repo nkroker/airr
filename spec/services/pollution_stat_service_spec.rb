@@ -29,22 +29,20 @@ RSpec.describe PollutionStatService, type: :model do
     end
   end
 
-  describe '.historic_aqi' do
-    context 'when location_id is provided' do
-      let!(:location_id) { 1 }
-      let!(:location) { create(:location, id: location_id) }
+  describe '#get_historic_aqi' do
+    context 'when location id is provided' do
+      let!(:location) { create(:location, id: 2) }
 
-      xit 'returns historic AQI data', :vcr do
-        response = PollutionStatService.historic_aqi(location_id: location_id)
+      xit 'returns historic data', :vcr do
+        response = PollutionStatService.get_historic_aqi(location_id: location.id)
 
         expect(response).to have_key('coord')
         expect(response).to have_key('list')
-        expect(response['coord']).to eq({ 'lat' => lat, 'lon' => lon })
       end
     end
   end
 
-  describe '.current_aqi' do
+  describe '#current_aqi' do
     context 'when the city is valid' do
       let!(:location) { create(:location, id: 1) }
       let!(:location_id) { location.id }

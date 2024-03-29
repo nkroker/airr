@@ -16,21 +16,17 @@ class PollutionStatService
       end
     end
 
-    def historic_aqi(location_id: nil, from: 30.days.ago, to: DateTime.now)
+    def get_historic_aqi(location_id: nil, from: 30.days.ago, to: DateTime.now)
       safe_call do
         return [] unless location_id.present?
 
         location = Location.find(location_id)
+        query_params = { lat: location.lat, lon: location.lon, start: from.to_i, end: to.to_i }.to_query
 
         resp = Client::OpenWeather.http_request(
           method: :get,
           path: '/data/2.5/air_pollution/history',
-          query: {
-            lat: location.lat,
-            lon: location.lon,
-            start: from.to_i,
-            end: to.to_i
-          }.to_query
+          query: query_params
         )
 
         JSON.parse(resp.body)
