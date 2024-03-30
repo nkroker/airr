@@ -1,0 +1,32 @@
+<h4>Average AQI</h4>
+
+<%= column_chart @average_aqi,
+  title: "All time Average AQI by City names",
+  colors: ['brown'],
+  library: {
+    tooltip: {
+      pointFormat: 'Times Bought: <b>{point.y}</b>'
+    }
+  }
+%>
+
+<hr>
+
+<%= form_with url: show_city_aqi_dashboard_index_path(format: :js), remote: true, method: :get, data: { turbo_frame: :average_aqi } do |form| %>
+  <%= form.select :location, Location.all.map { |location| [location.name, location.id] }, selected: @location.id, prompt: 'Select a location' %>
+  <%= form.submit 'Submit' %>
+<% end %>
+
+<div id="location-chart">
+  <%= column_chart @average_aqi_singular,
+    title: @location.name,
+    id: 'location-chart',
+    colors: ['brown'],
+    library: {
+      tooltip: {
+        pointFormat: 'Times Bought: <b>{point.y}</b>'
+      }
+    }
+  %>
+</div>
+

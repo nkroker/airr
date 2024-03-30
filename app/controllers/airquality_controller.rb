@@ -1,2 +1,0 @@
-class AirqualityController < ApplicationController
-end

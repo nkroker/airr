@@ -1,0 +1,3 @@
+<%= javascript_tag do %>
+  $("#location.chart").html("<%= j render partial: 'average_aqi', locals: { average_aqi_singular: @average_aqi_singular, title: @location.name } %>");
+<% end %>
