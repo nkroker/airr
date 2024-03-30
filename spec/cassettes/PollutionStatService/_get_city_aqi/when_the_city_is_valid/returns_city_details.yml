@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/geo/1.0/direct?appid=0bbe0d60d951a6d7d5a5584fd1ac8d3e&q=Orlando
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 28 Mar 2024 18:16:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2554'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/direct?q=orlando"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6Ik9ybGFuZG8iLCJsb2NhbF9uYW1lcyI6eyJzbyI6Ik9ybGFuZG8iLCJpdCI6Ik9ybGFuZG8iLCJhbiI6Ik9ybGFuZG8iLCJ6aCI6IuWlpeWFsOWkmi/lpafomK3lpJoiLCJubyI6Ik9ybGFuZG8iLCJiaSI6IkZsb3JpZGEiLCJ0aCI6IuC4reC4reC4o+C5jOC5geC4peC4meC5guC4lCIsImJuIjoi4Kar4KeN4Kay4KeL4Kaw4Ka/4Kah4Ka+IiwieWkiOiLXpNec15DXqNeZ15PXoiIsInRyIjoiT3JsYW5kbyIsIm5sIjoiT3JsYW5kbyIsImNhIjoiT3JsYW5kbyIsInBhIjoi4Kir4Ki84Kiy4KmM4Kiw4Ki/4Kih4Ki+IiwiaWciOiJGbMOzcsOtZOG6oSIsImVuIjoiT3JsYW5kbyIsImF6IjoiRmxvcmlkYSIsImxiIjoiRmxvcmlkYSIsInNjIjoiT3JsYW5kbyIsIml1Ijoi4ZGJ4ZOY4ZWH4ZGWIiwicm0iOiJGbG9yaWRhIiwia28iOiLsmKzrnpzrj4QiLCJzZSI6IkZsb3JpZGEiLCJybyI6Ik9ybGFuZG8iLCJhZiI6Ik9ybGFuZG8sIEZsb3JpZGEiLCJvYyI6Ik9ybGFuZG8iLCJteSI6IuGAluGAnOGAseGArOGAuuGAm+GAruGAkuGAq+GAleGAvOGAiuGAuuGAlOGAmuGAuiIsInN3IjoiT3JsYW5kbyIsImdhIjoiT3JsYW5kbyIsImlvIjoiT3JsYW5kbyIsInV6IjoiRmxvcmlkYSIsImN5IjoiT3JsYW5kbyIsImZyIjoiT3JsYW5kbyIsImJnIjoi0J7RgNC70LDQvdC00L4iLCJudiI6IkdhaCBCaWtlZcq8IFRhYWggWcOtyrzDoWjDrSIsImNlIjoi0J7RgNC70LDQvdC00L4iLCJoYSI6IkZsb3JpZGEiLCJreSI6ItCe0YDQu9Cw0L3QtNC+Iiwib3MiOiLQpNC70L7RgNC40LTDpiIsImp2IjoiRmxvcmlkYSIsImlhIjoiT3JsYW5kbyIsImN2Ijoi0KTQu9C+0YDQuNC00LAiLCJ4aCI6IklGbG9yaWRhIiwibHYiOiJPcmxhbmRvIiwibmUiOiLgpKvgpY3gpLLgpYvgpLDgpL/gpKHgpL4iLCJoeSI6ItWV1bzVrNWh1bbVpNW4IiwidGciOiLQpNC70L7RgNC40LTQsCIsImJyIjoiT3JsYW5kbyIsImxhIjoiRmxvcmlkYSIsInBsIjoiT3JsYW5kbyIsInRlIjoi4LCr4LGN4LCy4LGL4LCw4LC/4LCh4LC+IiwibWsiOiLQntGA0LvQsNC90LTQviIsIm1nIjoiT3JsYW5kbyIsImhyIjoiT3JsYW5kbyIsImhlIjoi15DXldeo15zXoNeT15UiLCJmeSI6Ik9ybGFuZG8iLCJqYSI6IuOCquODvOODqeODs+ODiSIsImx0IjoiT3JsYW5kYXMiLCJiZSI6ItCQ0YDQu9Cw0L3QtNCwIiwidm8iOiJPcmxhbmRvIiwiaHUiOiJPcmxhbmRvIiwienUiOiJGbG9yaWRhIiwiZm8iOiJPcmxhbmRvIiwibm4iOiJPcmxhbmRvIiwiZ3YiOiJPcmxhbmRvIiwiYnMiOiJPcmxhbmRvIiwidmkiOiJPcmxhbmRvIiwiZ3UiOiLgqpPgqrDgq43gqrLgqr7gqqjgq43gqqHgq4ssIOCqq+CrjeCqsuCri+CqsOCqv+CqoeCqviIsImllIjoiT3JsYW5kbyIsImlzIjoiT3JsYW5kbyIsInNoIjoiT3JsYW5kbyIsImlkIjoiT3JsYW5kbyIsInN2IjoiT3JsYW5kbyIsIm1sIjoi4LSr4LWN4LSy4LWL4LSx4LS/4LShIiwia3ciOiJPcmxhbmRvIiwibmEiOiJPcmxhbmRvIiwiaWsiOiJGbG9yaWRhIiwibXIiOiLgpJPgpLDgpLLgpIHgpKHgpYsiLCJ0bCI6Ik9ybGFuZG8iLCJtbiI6ItCe0YDQu9Cw0L3QtNC+IiwibWkiOiJGbG9yaWRhIiwiYXkiOiJGbG9yaWRhIHN1eXUiLCJrYSI6IuGDneGDoOGDmuGDkOGDnOGDk+GDnSIsIm1zIjoiT3JsYW5kbyIsImV1IjoiT3JsYW5kbyIsImZhIjoi2KfZiNix2YTZhtiv2YjYjCDZgdmE2YjYsduM2K/YpyIsInRhIjoi4K6S4K6w4K+N4K6y4K6+4K6j4K+N4K6f4K+LIiwiaHQiOiJPcmxhbmRvIiwiYXIiOiLYo9mI2LHZhNin2YbYr9mIIiwicHQiOiJPcmxhbmRvIiwic24iOiJGbG9yaWRhIiwiYmEiOiLQpNC70L7RgNC40LTQsCIsInNhIjoi4KSr4KWN4KSy4KWL4KSw4KS/4KSh4KS+IiwicGkiOiLgpKvgpY3gpLLgpYvgpLDgpL/gpKHgpL4iLCJzciI6ItCe0YDQu9Cw0L3QtNC+IiwidXIiOiLYp9mI2LHZhNuM2YbaiNmI2Iwg2YHZhNmI2LHbjNqI2KciLCJlbyI6Ik9ybGFuZG8iLCJibyI6IuC9p+C+peC9vOC8i+C9o+C9vOC8i+C9ouC9suC8i+C9jOC8jSIsImduIjoiRmxvcmlkYSIsImVzIjoiT3JsYW5kbyIsInNrIjoiT3JsYW5kbyIsInJ1Ijoi0J7RgNC70LDQvdC00L4iLCJxdSI6IkZsb3JpZGEgc3V5dSIsImNzIjoiT3JsYW5kbyIsInNsIjoiT3JsYW5kbyIsImxpIjoiRmxvcmlkYSIsImZpIjoiT3JsYW5kbyIsInVrIjoi0J7RgNC70LDQvdC00L4iLCJ5byI6IkZsb3JpZGEiLCJnZCI6Ik9ybGFuZG8iLCJkYSI6Ik9ybGFuZG8iLCJoaSI6IuCkq+CkvOCljeCksuCli+CksOCkv+CkoeCkviIsInNxIjoiT3JsYW5kbyIsImRlIjoiT3JsYW5kbyIsImJoIjoi4KSr4KWN4KSy4KWL4KSw4KS/4KSh4KS+IiwiZ2wiOiJPcmxhbmRvIiwidWciOiJGbG9yaWRhIFNoaXRhdGkiLCJrbiI6IuCyq+CzjeCysuCyvuCysOCyv+CyoSIsImV0IjoiT3JsYW5kbyIsImVsIjoizp/Pgc67zqzOvc+Ezr8iLCJrayI6ItCk0LvQvtGA0LjQtNCwIiwidHQiOiLQntGA0LvQsNC90LTQviIsImt1IjoiRmxvcmlkYSJ9LCJsYXQiOjI4LjU0MjExMDksImxvbiI6LTgxLjM3OTAzMDQsImNvdW50cnkiOiJVUyIsInN0YXRlIjoiRmxvcmlkYSJ9XQ==
+  recorded_at: Thu, 28 Mar 2024 18:16:26 GMT
+recorded_with: VCR 6.2.0
