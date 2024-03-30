@@ -1,0 +1,5 @@
+PollutionReportFetcherJob:
+  description: "We need to run this every 30 seconds"
+  interval: ["10s"]
+  args: 'fetch_stat'
+  queue: default
