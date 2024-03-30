@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PollutionStatServiceError < StandardError ; end
+class PollutionStatServiceError < StandardError; end
 
 class PollutionStatService
   class << self
