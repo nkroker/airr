@@ -1,7 +1,7 @@
 # Airr
 Simple app to visualize AQI using rails 7
 
-## Manual Install
+### Manual Install
   #### Steps to install
   - Clone the Repo cd into the repo
   - Rename `dot-env.example` to '.env`
@@ -10,7 +10,7 @@ Simple app to visualize AQI using rails 7
   - Run 'rails server' & 'bundle exec sidekiq`
   - Open [localhost](http://0.0.0.0:3000)
 
-## Docker install
+### Docker install
   #### Prerequisite
   - Make
   - Docker
