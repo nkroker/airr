@@ -38,9 +38,6 @@ stop:
 shell:
 	$(COMPOSE) run web bash  # Replace 'web' with the actual service name
 
-status:
-	$(COMPOSE) ps
-
 console:
 	$(COMPOSE) logs
 
