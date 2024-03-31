@@ -35,3 +35,7 @@ I've added make to simplify the process command description is
 
 After running launch
   [localhost](http://0.0.0.0:3000)
+
+## License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
