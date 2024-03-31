@@ -1,7 +1,7 @@
 OPEN_WEATHER_API_KEY: 'your openweather api goes here'
-DATABASE_HOST: 'localhost or whatever host you want to use'
+DATABASE_HOST: db
 DATABASE_NAME: 'air_pollution_app'
-DATABASE_USER: 'database user for the app'
-DATABASE_PASSWORD: 'database password for the app'
-REDISCLOUD_URL: 'redis://localhost:6379'
+DATABASE_USER: 'rails'
+DATABASE_PASSWORD: 'password'
+REDISCLOUD_URL: 'redis://redis:6379'
 IS_SCHEDULER: 'true'

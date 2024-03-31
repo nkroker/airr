@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AirPollutionApp</title>
+    <title>AirPollutionAppBackup</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <%= javascript_include_tag("application", media: "all", "data-turbolinks-track" => true) %>
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row flex-nowrap">
-        <%= render 'shared/navbar' %>
-          <div class="col py-3">
-            <%= yield %>
-          </div>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>

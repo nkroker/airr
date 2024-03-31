@@ -36,6 +36,7 @@
 .byebug_history
 .rspec
 .vscode
+**.DS_Store
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
