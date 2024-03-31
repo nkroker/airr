@@ -1,6 +1,7 @@
 :concurrency: 3
 :timeout: 60
 :verbose: true
+:url: "#{ENV['REDISCLOUD_URL']}/0"
 :queues:
   - critical
   - default
