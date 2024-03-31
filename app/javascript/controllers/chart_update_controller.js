@@ -30,4 +30,23 @@ export default class extends Controller {
         chart.updateData(response.data);
       });
   }
+
+  updateChart(event) {
+    event.preventDefault();
+
+    const options = {
+      method: this.element.method,
+      headers: {
+        'Accept': 'application/json'
+      }
+    };
+
+    fetch(event.target.href, options)
+      .then(response => response.json())
+      .then((response) => {
+        document.getElementById("locationDropdown").innerHTML = response.title;
+        const chart = Chartkick.charts['chart-2'];
+        chart.updateData(response.data);
+      });
+  }
 }

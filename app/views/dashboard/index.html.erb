@@ -1,29 +1,45 @@
-<h4>Average AQI</h4>
+<div class="card mt-5">
+  <div class="card-header">
+    <h5 class="card-title">Average AQI</h5>
+  </div>
+  <div class="card-body">
+    <%= column_chart @average_aqi,
+        title: "All time Average AQI by City names",
+        colors: ['#5b68fc'],
+        library: {
+          tooltip: {
+            pointFormat: 'Times Bought: <b>{point.y}</b>'
+          }
+        }
+      %>
+  </div>
+</div>
 
-<%= column_chart @average_aqi,
-  title: "All time Average AQI by City names",
-  colors: ['blue'],
-  library: {
-    tooltip: {
-      pointFormat: 'Times Bought: <b>{point.y}</b>'
-    }
-  }
-%>
-
-<hr>
-<%= form_with url: show_city_aqi_dashboard_index_path(format: :json), id: 'location-form', method: :get, data: { controller: 'chart-update' } do |form| %>
-  <%= form.select :location, Location.all.map { |location| [location.name, location.id] }, selected: @location.id, prompt: 'Select a location' %>
-  <%= form.submit 'Submit' %>
-<% end %>
-
-<div id="location-chart">
-  <%= bar_chart @average_aqi_singular,
-    title: 'Average AQI by selected City',
-    colors: ['blue'],
-    library: {
-      tooltip: {
-        pointFormat: 'Times Bought: <b>{point.y}</b>'
-      }
-    }
-  %>
+<div class="card mt-5">
+  <div class="card-header">
+    <h5 class="card-title">Average AQI of City</h5>
+  </div>
+  <div class="card-body">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle rounded-pill" type="button" id="locationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <%= @location.name %>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+        <% Location.all.each do |location| %>
+          <li><%= link_to location.name, show_city_aqi_dashboard_index_path(location: location.id, format: :json), method: :get, data: { controller: 'chart-update', action: 'click->chart-update#updateChart' }, class: 'dropdown-item' %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div id="location-chart">
+      <%= bar_chart @average_aqi_singular,
+        title: 'Average AQI by selected City',
+        colors: ['#5b68fc'],
+        library: {
+          tooltip: {
+            pointFormat: 'Times Bought: <b>{point.y}</b>'
+          }
+        }
+      %>
+    </div>
+  </div>
 </div>
